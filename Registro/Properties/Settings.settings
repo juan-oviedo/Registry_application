@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Registro.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FirstTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SpaceBetweenTurns" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="MorningEntry" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12:00</Value>
+    </Setting>
+    <Setting Name="MorningExit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">15:00</Value>
+    </Setting>
+    <Setting Name="AfternoonEntry" Type="System.String" Scope="User">
+      <Value Profile="(Default)">19:30</Value>
+    </Setting>
+    <Setting Name="AfternoonExit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">23:00</Value>
+    </Setting>
+    <Setting Name="ChangeTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">18:00</Value>
+    </Setting>
+    <Setting Name="OutputDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OutputFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Empleados</Value>
+    </Setting>
+    <Setting Name="DataBaseActualized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

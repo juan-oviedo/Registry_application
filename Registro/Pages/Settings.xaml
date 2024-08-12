@@ -1,0 +1,91 @@
+﻿<Page x:Class="Registro.Pages.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registro.Pages"
+       xmlns:UserControls="clr-namespace:Registro.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Settings">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="350">
+            <TextBlock Text="Configuraciones" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Directorio de salida:" VerticalAlignment="Center"/>
+                <TextBlock x:Name="OutputDirectoryTextBlock" Width="150" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <Button Content="Seleccionar" Click="Btn_SelectDirectory" Margin="10,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Nombre del archivo:" VerticalAlignment="Center"/>
+                <TextBox x:Name="FileNameTextBox" Width="150" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="5">
+                <TextBlock Text="Cantidad de celdas entre turnos:" VerticalAlignment="Center"/>
+                <TextBox x:Name="SpaceBetweenTurnsTextBox" Width="50" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <TextBlock Text="?" Foreground="Blue" Margin="5,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.ToolTip>
+                        <ToolTip Content="Default 6. Agrega celdas en el excel para separar los turnos, aumentar si hay muchos empleados por turno"/>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="5">
+                <TextBlock Text="Comienzo Turno Mañana:" VerticalAlignment="Center"/>
+                <UserControls:TimePicker x:Name="MorningEntryTimePicker" Margin="10,0,0,0"/>
+                <TextBlock Text="?" Foreground="Blue" Margin="5,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.ToolTip>
+                        <ToolTip Content="Default 12:00. Hora de inicio del turno mañana."/>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="5">
+                <TextBlock Text="Final Turno Mañana:" VerticalAlignment="Center"/>
+                <UserControls:TimePicker x:Name="MorningExitTimePicker" Margin="10,0,0,0"/>
+                <TextBlock Text="?" Foreground="Blue" Margin="5,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.ToolTip>
+                        <ToolTip Content="Default 15:00. Hora de fin del turno mañana."/>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Comienzo Turno Tarde:" VerticalAlignment="Center"/>
+                <UserControls:TimePicker x:Name="AfternoonEntryTimePicker" Margin="10,0,0,0"/>
+                <TextBlock Text="?" Foreground="Blue" Margin="5,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.ToolTip>
+                        <ToolTip Content="Default 19:30. Hora de inicio del turno tarde."/>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="5">
+                <TextBlock Text="Final Turno Tarde:" VerticalAlignment="Center"/>
+                <UserControls:TimePicker x:Name="AfternoonExitTimePicker" Margin="10,0,0,0"/>
+                <TextBlock Text="?" Foreground="Blue" Margin="5,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.ToolTip>
+                        <ToolTip Content="Default 23:00. Hora de fin del turno tarde."/>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"  Margin="5">
+                <TextBlock Text="Horario de Cambio:" VerticalAlignment="Center"/>
+                <UserControls:TimePicker x:Name="ChangeTimeTimePicker" Margin="10,0,0,0"/>
+                <TextBlock Text="?" Foreground="Blue" Margin="5,0,0,0" VerticalAlignment="Center">
+                    <TextBlock.ToolTip>
+                        <ToolTip Content="Default 18:00. Hora que divide estrictamente los turnos, es utilizado para realiar calculos de entrada y salida, cambiar con cuidado."/>
+                    </TextBlock.ToolTip>
+                </TextBlock>
+            </StackPanel>
+
+            <Button Content="Guardar" Margin="0,20,0,10" Click="Btn_Save"/>
+            <Button Content="Volver al menu principal" Click="Btn_GoBack"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,21 @@
+﻿<Page x:Class="Registro.Pages.SettingsMain"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registro.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SettingsMain">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="Configuracion Desarrollador" FontSize="20" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <Button Content="Añadir Empleado" Margin="0,20,0,10" Click="Btn_AddEmployee"/>
+            <Button Content="Eliminar Empleado" Margin="0,20,0,10" Click="Btn_DeleteEmployee"/>
+            <Button Content="Configuraciones" Margin="0,20,0,10" Click="Btn_Settings"/>
+            <Button Content="Cerrar Ventana" Margin="0,20,0,10" Click="Btn_Close"/>
+        </StackPanel>
+    </Grid>
+</Page>
